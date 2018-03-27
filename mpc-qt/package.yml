@@ -1,0 +1,23 @@
+name       : mpc-qt
+version    : 17.11
+release    : 1
+source     :
+    - https://github.com/cmdrkotori/mpc-qt/archive/v17.11.tar.gz : b19217eb314f53d5a2e93ef022c0939dacfb32ac40ab4ee2e6c56191cc12c7f2
+license    : GPL-2.0
+component  : multimedia.video
+summary    : A clone of Media Player Classic reimplemented in Qt.
+description: |
+    Media Player Classic Home Cinema (mpc-hc) is considered by many to be the quintessential media player for the Windows
+    desktop. Media Player Classic Qute Theater (mpc-qt) aims to reproduce most of the interface and functionality of mpc-hc
+    while using libmpv to play video instead of DirectShow.
+builddeps  :
+    - pkgconfig(gl)
+    - pkgconfig(mpv)
+    - pkgconfig(Qt5X11Extras)
+    - qt5-tools-devel
+setup      : |
+    %qmake "PREFIX=%installroot%/usr" mpc-qt.pro
+build      : |
+    %make
+install    : |
+    %make_install

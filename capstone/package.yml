@@ -1,0 +1,14 @@
+name       : capstone
+version    : 3.0.4
+release    : 1
+source     :
+    - https://github.com/aquynh/capstone/archive/3.0.4.tar.gz : 5d6dadf5864c56f8de66c66088fa68e849d0bff6577865a4f81b6f23112b14f2
+license    : BSD
+component  : programming.tools
+summary    : A lightweight multi-platform, multi-architecture disassembly framework
+description: |
+    Capstone is a lightweight multi-platform, multi-architecture disassembly framework.
+build      : |
+    %make
+install    : |
+    %make_install

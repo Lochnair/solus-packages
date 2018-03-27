@@ -1,0 +1,23 @@
+name       : networkmanager-wireguard
+version    : 0.1
+release    : 1
+source     :
+    - https://github.com/max-moser/network-manager-wireguard/archive/dce4fd41dd62059d33a30329f559bcc5f074291e.tar.gz : a944d19782e0236913875fa392e458229867078f42f13af58c6315bdbb3887f0
+license    : GPL-2.0 # CHECK ME
+component  : network.base
+summary    : This project is a VPN Plugin for NetworkManager that handles client-side WireGuard connections.
+description: |
+    This project is a VPN Plugin for NetworkManager that handles client-side WireGuard connections.
+builddeps  :
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libnma)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(libnm-gtk)
+    - pkgconfig(libnm)
+setup      : |
+    %autogen
+build      : |
+    %make
+install    : |
+    %make_install

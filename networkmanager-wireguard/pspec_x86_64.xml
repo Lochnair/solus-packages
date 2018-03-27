@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>networkmanager-wireguard</Name>
+        <Packager>
+            <Name>Nils Andreas Svee</Name>
+            <Email>me@lochnair.net</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <PartOf>network.base</PartOf>
+        <Summary xml:lang="en">This project is a VPN Plugin for NetworkManager that handles client-side WireGuard connections.</Summary>
+        <Description xml:lang="en">This project is a VPN Plugin for NetworkManager that handles client-side WireGuard connections.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>networkmanager-wireguard</Name>
+        <Summary xml:lang="en">This project is a VPN Plugin for NetworkManager that handles client-side WireGuard connections.</Summary>
+        <Description xml:lang="en">This project is a VPN Plugin for NetworkManager that handles client-side WireGuard connections.
+</Description>
+        <PartOf>network.base</PartOf>
+        <Files>
+            <Path fileType="config">/etc/NetworkManager/VPN/nm-wireguard-service.name</Path>
+            <Path fileType="config">/etc/dbus-1/system.d/nm-wireguard-service.conf</Path>
+            <Path fileType="library">/usr/lib/NetworkManager/VPN/nm-wireguard-service.name</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/libnm-vpn-plugin-wireguard-editor.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/libnm-vpn-plugin-wireguard.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/libnm-wireguard-properties.so</Path>
+            <Path fileType="library">/usr/lib64/networkmanager-wireguard/nm-wireguard-auth-dialog</Path>
+            <Path fileType="library">/usr/lib64/networkmanager-wireguard/nm-wireguard-service</Path>
+            <Path fileType="data">/usr/share/appdata/network-manager-wireguard.metainfo.xml</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-03-26</Date>
+            <Version>0.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Nils Andreas Svee</Name>
+            <Email>me@lochnair.net</Email>
+        </Update>
+    </History>
+</PISI>

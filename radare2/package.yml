@@ -1,0 +1,24 @@
+name       : radare2
+version    : 2.3.0
+release    : 1
+source     :
+    - http://radare.mikelloc.com/get/2.3.0/radare2-2.3.0.tar.gz : 97c052b61cb62db4976428b8b03930e867d79e22db5be1907300a04a84c88320
+license    : LGPL-3.0 # CHECK ME
+component  : programming.tools
+summary    : unix-like reverse engineering framework and commandline tools
+description: |
+    Radare project started as a forensics tool, a scriptable commandline hexadecimal editor able to open disk files, but later
+    support for analyzing binaries, disassembling code, debugging programs, attaching to remote gdb servers, ..
+builddeps  :
+    - capstone-devel
+    - libzip-devel
+    - openssl-devel
+setup      : |
+    %configure \
+        --with-syscapstone \
+        --with-syszip \
+        --with-openssl
+build      : |
+    %make
+install    : |
+    %make_install
